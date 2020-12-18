@@ -119,6 +119,14 @@ const STATICVAULT = [
       'Upon use will create an odor that will allow you to repel monsters (with an olfactory system) and the opposite sex for the next hour. Monsters and members of the opposite sex must make a constitution saving throw, DC 15, to get within 10 feet of your person. Can has enough left for 3 uses.',
     contributor: 'Arcnine',
   },
+  {
+    name: 'The Bandana of Charlos Santana',
+    rarity: 'Rare',
+    categories: ['clothing'],
+    description:
+      'Worn bandana of famed bard Charlos Santana. While wearing, gives the wearer increased musical ability, especially with the Spanish guitar. Also gains +3 charm on a persuasion roll by a bard when using musical ability to persuade',
+    contributor: 'StefonStrange',
+  },
 ];
 
 export default STATICVAULT;
