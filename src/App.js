@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
+import SearchBar from './SearchBar/SearchBar';
+import ItemVault from './ItemVault/ItemVault';
+import STATICVAULT from './STATICVAULT';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = { items: STATICVAULT, currentItem: {} };
+
+  getRandomItem = () => {
+    let randomItem = this.state.items[
+      Math.floor(Math.random() * this.state.items.length)
+    ];
+    console.log(randomItem);
+    this.setState({ currentItem: randomItem });
+  };
+  render() {
+    return (
+      <div className="App">
+        <SearchBar getRandomItem={this.getRandomItem} />
+        <div className="random-item-window">
+          <ItemVault currentItem={this.state.currentItem} />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
