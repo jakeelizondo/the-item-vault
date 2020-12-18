@@ -7,17 +7,25 @@ import './App.css';
 class App extends React.Component {
   state = { items: STATICVAULT, currentItem: {} };
 
-  getRandomItem = () => {
-    let randomItem = this.state.items[
-      Math.floor(Math.random() * this.state.items.length)
-    ];
-    console.log(randomItem);
+  setRandomItem = () => {
+    let randomItem;
+    do {
+      randomItem = this.getRandomItem();
+    } while (randomItem === this.state.currentItem);
+
     this.setState({ currentItem: randomItem });
   };
+
+  getRandomItem = () => {
+    return this.state.items[
+      Math.floor(Math.random() * this.state.items.length)
+    ];
+  };
+
   render() {
     return (
       <div className="App">
-        <SearchBar getRandomItem={this.getRandomItem} />
+        <SearchBar setRandomItem={this.setRandomItem} />
         <div className="random-item-window">
           <ItemVault currentItem={this.state.currentItem} />
         </div>

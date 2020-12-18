@@ -111,6 +111,14 @@ const STATICVAULT = [
       'This magical cloak grants a +1 to Intelligence, but ensures that the wearer makes constant errors in their speech and mixes up different objects while speaking. For example, they might intend to ask for a cup of tea, but might end up asking for a cup of pee instead.',
     contributor: 'StefonStrange',
   },
+  {
+    name: 'Body Spray of the Axe',
+    rarity: 'Uncommon',
+    categories: ['consumable'],
+    description:
+      'Upon use will create an odor that will allow you to repel monsters (with an olfactory system) and the opposite sex for the next hour. Monsters and members of the opposite sex must make a constitution saving throw, DC 15, to get within 10 feet of your person. Can has enough left for 3 uses.',
+    contributor: 'Arcnine',
+  },
 ];
 
 export default STATICVAULT;
