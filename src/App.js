@@ -1,6 +1,8 @@
 import React from 'react';
-import SearchBar from './SearchBar/SearchBar';
-import ItemVault from './ItemVault/ItemVault';
+import AddItemForm from './AddItemForm/AddItemForm';
+import Header from './Header/Header';
+import { Route } from 'react-router-dom';
+import RandomItemGenerator from './RandomItemGenerator/RandomItemGenerator';
 import STATICVAULT from './STATICVAULT';
 import './App.css';
 
@@ -24,12 +26,20 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <SearchBar setRandomItem={this.setRandomItem} />
-        <div className="random-item-window">
-          <ItemVault currentItem={this.state.currentItem} />
-        </div>
-      </div>
+      <React.Fragment>
+        <Route path="/" component={Header} />
+        <Route path="/submit-item-suggestion" component={AddItemForm} />
+        <Route
+          exact
+          path="/"
+          render={() => (
+            <RandomItemGenerator
+              setRandomItem={this.setRandomItem}
+              currentItem={this.state.currentItem}
+            />
+          )}
+        />
+      </React.Fragment>
     );
   }
 }

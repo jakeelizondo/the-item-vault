@@ -68,6 +68,69 @@
     border-radius: 10px;
     padding: 5px;
   }
+
+  /* item suggestion page styles */
+
+  .submission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .submission h1 {
+    text-align: center;
+  }
+
+  .suggest-item-form {
+    padding: 10px;
+    margin: 5px;
+    background-color: #3581b8;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .suggest-item-form p {
+    text-align: center;
+  }
+
+  .suggest-item-form label {
+    margin-top: 10px;
+  }
+
+  .item-category {
+    background-color: lightgray;
+    border-radius: 5px;
+    color: black;
+    padding: 0px 10px 10px 10px;
+  }
+
+  .name-options {
+    background-color: lightgray;
+    border-radius: 5px;
+    color: black;
+    padding: 0px 10px 10px 10px;
+  }
+
+  .credit-name {
+    margin: 20px 0px 10px 0px;
+  }
+
+  .submission button {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .back-button {
+    margin-top: 15px;
+  }
+
+  .to-submit-suggestion {
+    margin-top: 15px;
+  }
 }
 
 @media all and (min-width: 700px) {
@@ -76,7 +139,9 @@
   }
 
   .App-header {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #151e3f;
     color: white;
     padding: 20px;
@@ -84,6 +149,11 @@
 
   .App-header h1 {
     margin: 0;
+  }
+
+  .App-header button {
+    margin-top: 20px;
+    font-size: 15px;
   }
 
   .random-item-window {
@@ -144,5 +214,70 @@
     border-radius: 10px;
     padding: 5px;
     font-size: 25px;
+  }
+
+  /* item suggestion page styles */
+
+  .submission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .submission h1 {
+    text-align: center;
+  }
+
+  .suggest-item-form {
+    padding: 10px;
+    margin: 5px;
+    background-color: #3581b8;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .suggest-item-form p {
+    text-align: center;
+  }
+
+  .suggest-item-form label {
+    margin-top: 10px;
+  }
+
+  .item-category {
+    background-color: lightgray;
+    border-radius: 5px;
+    color: black;
+    padding: 0px 10px 10px 10px;
+  }
+
+  .name-options {
+    background-color: lightgray;
+    border-radius: 5px;
+    color: black;
+    padding: 0px 10px 10px 10px;
+  }
+
+  .credit-name {
+    margin: 20px 0px 10px 0px;
+  }
+
+  .submission button {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .back-button {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+
+  .to-submit-suggestion {
+    margin-top: 15px;
+    font-size: 20px;
   }
 }
